@@ -15,6 +15,7 @@
 		5C15155A1BF43091005DBF2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1515581BF43091005DBF2F /* LaunchScreen.storyboard */; };
 		5C1515651BF43091005DBF2F /* DrawerEffectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1515641BF43091005DBF2F /* DrawerEffectTests.m */; };
 		5C1515701BF43091005DBF2F /* DrawerEffectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15156F1BF43091005DBF2F /* DrawerEffectUITests.m */; };
+		5C15157F1BF43485005DBF2F /* BQHerderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15157E1BF43485005DBF2F /* BQHerderView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5C15156B1BF43091005DBF2F /* DrawerEffectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawerEffectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C15156F1BF43091005DBF2F /* DrawerEffectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerEffectUITests.m; sourceTree = "<group>"; };
 		5C1515711BF43091005DBF2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C15157D1BF43485005DBF2F /* BQHerderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQHerderView.h; sourceTree = "<group>"; };
+		5C15157E1BF43485005DBF2F /* BQHerderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQHerderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				5C15154E1BF43091005DBF2F /* AppDelegate.m */,
 				5C1515501BF43091005DBF2F /* ViewController.h */,
 				5C1515511BF43091005DBF2F /* ViewController.m */,
+				5C15157D1BF43485005DBF2F /* BQHerderView.h */,
+				5C15157E1BF43485005DBF2F /* BQHerderView.m */,
 				5C1515531BF43091005DBF2F /* Main.storyboard */,
 				5C1515561BF43091005DBF2F /* Assets.xcassets */,
 				5C1515581BF43091005DBF2F /* LaunchScreen.storyboard */,
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1515521BF43091005DBF2F /* ViewController.m in Sources */,
+				5C15157F1BF43485005DBF2F /* BQHerderView.m in Sources */,
 				5C15154F1BF43091005DBF2F /* AppDelegate.m in Sources */,
 				5C15154C1BF43091005DBF2F /* main.m in Sources */,
 			);
