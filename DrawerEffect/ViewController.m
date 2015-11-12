@@ -14,9 +14,10 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"这是用来演示抽屉效果的");
 }
 
 - (void)didReceiveMemoryWarning {
