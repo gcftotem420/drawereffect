@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     NSLog(@"这是用来演示抽屉效果的");
+    NSLog(@"haha");
 }
 
 - (void)didReceiveMemoryWarning {
