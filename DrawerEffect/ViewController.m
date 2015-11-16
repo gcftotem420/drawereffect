@@ -22,6 +22,8 @@
     [self initUI];
 }
 
+#pragma mark - 实现headerView代理方法
+
 -(void)changeRowHeight:(UIButton *)sender
 {
     BQHerderView *temp = self.headerViews[sender.tag];
@@ -36,6 +38,8 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - 初始化页面
+
 -(void)initUI
 {
     self.navigationItem.title = @"好友列表";
@@ -48,6 +52,8 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
 }
+
+#pragma mark - 创建数据
 
 -(void)createData
 {
@@ -70,22 +76,30 @@
     [self.headerViews addObject:hv2];
 }
 
+#pragma mark - tableView代理方法，相应section有多少个cell
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     BQHerderView *tempHeader = [self.headerViews objectAtIndex:section];
     return tempHeader.names.count;
 }
 
+#pragma mark - tableView代理方法，有多少个section
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.headerViews.count;
 }
+
+#pragma mark - tableView代理方法，根据headerView的on的开关状态，确定返回的行高
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BQHerderView *temp = self.headerViews[indexPath.section];
     return temp.on?45.0f:0.0f;
 }
+
+#pragma mark - tableView代理方法，确定cell的样式
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -101,10 +115,14 @@
     return cell;
 }
 
+#pragma mark - tableView代理方法，确定headerView的行高
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 45.0f;
 }
+
+#pragma mark - tableView代理方法，确定headerView的样式
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {

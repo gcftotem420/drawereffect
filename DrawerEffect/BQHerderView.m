@@ -10,6 +10,7 @@
 
 @implementation BQHerderView
 
+#pragma mark - 初始化的方法
 
 -(id)initWithName:(NSString *)name andFrame:(CGRect)frame
 {
@@ -28,10 +29,14 @@
     return self;
 }
 
+#pragma mark - btn点击执行的方法
+
 -(void)btnClick:(UIButton *)sender
 {
     [self.delegate changeRowHeight:sender];
 }
+
+#pragma mark - 初始化的工厂方法
 
 +(BQHerderView *)herderViewWithName:(NSString *)name andFrame:(CGRect)frame
 {

@@ -10,6 +10,8 @@
 
 @protocol BQHerderViewDelegate <NSObject>
 
+#pragma mark - 代理方法
+
 -(void)changeRowHeight:(UIButton *)sender;
 
 @end
