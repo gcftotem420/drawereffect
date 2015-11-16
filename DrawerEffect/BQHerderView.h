@@ -10,13 +10,18 @@
 
 @protocol BQHerderViewDelegate <NSObject>
 
--(void)changeRowHeight;
+-(void)changeRowHeight:(UIButton *)sender;
 
 @end
 
 @interface BQHerderView : UIView
 @property(nonatomic,assign) BOOL on;
 @property(nonatomic,strong) UIButton *btn;
+@property(nonatomic,strong) NSMutableArray *names;
 @property(nonatomic,weak) id <BQHerderViewDelegate> delegate;
+
+-(id)initWithName:(NSString *)name andFrame:(CGRect) frame;
+
++(BQHerderView *)herderViewWithName:(NSString *)name andFrame:(CGRect) frame;
 
 @end

@@ -10,12 +10,33 @@
 
 @implementation BQHerderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+-(id)initWithName:(NSString *)name andFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        self.names = [NSMutableArray array];
+        self.on = YES;
+        self.btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.btn.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+        [self.btn setTitle:name forState:UIControlStateNormal];
+        self.btn.backgroundColor = [UIColor cyanColor];
+        [self.btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.btn];
+    }
+    return self;
 }
-*/
+
+-(void)btnClick:(UIButton *)sender
+{
+    [self.delegate changeRowHeight:sender];
+}
+
++(BQHerderView *)herderViewWithName:(NSString *)name andFrame:(CGRect)frame
+{
+    return [[BQHerderView alloc] initWithName:name andFrame:frame];
+}
+
 
 @end
